@@ -2,22 +2,30 @@
     "version": 2,
     "builds": [
       {
-        "src": "user/*.php",
-        "use": "@vercel/php"
-      },
-      {
-        "src": "produk/*.php",
+        "src": "api/**/*.php",
         "use": "@vercel/php"
       }
     ],
     "routes": [
       {
-        "src": "/user/list",
-        "dest": "/user/list.php"
+        "src": "/api/user/list",
+        "dest": "/api/user/list.php"
       },
       {
-        "src": "/produk/list_produk",
-        "dest": "/produk/list_produk.php"
+        "src": "/api/user/login",
+        "dest": "/api/user/login.php"
+      },
+      {
+        "src": "/api/user/register",
+        "dest": "/api/user/register.php"
+      },
+      {
+        "src": "/api/produk/list_produk",
+        "dest": "/api/produk/list_produk.php"
+      },
+      {
+        "src": "/api/produk/detail_produk",
+        "dest": "/api/produk/detail_produk.php"
       }
     ]
   }
